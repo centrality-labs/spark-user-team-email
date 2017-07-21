@@ -57,3 +57,13 @@ Spark Team Email allows adding secondary email addresses for a user in the conte
             return $this->sparkTeams()->withPivot(['email', 'role']);
         }
     ```
+
+1. You may wish to add the team emails of a user to your model JSON, do this with:
+
+    ```PHP
+    protected $appends = [
+        ...
+        'teamEmails',
+        ...
+    ];
+    ```
