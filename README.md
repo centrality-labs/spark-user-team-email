@@ -23,6 +23,12 @@ Spark User Team Email allows adding secondary email addresses for a user in the 
     composer require zinethq/spark-user-team-email:dev-master
     ```
 
+1. Add the service provider to your project's `config/app.php` file.
+
+    ```php
+    ZiNETHQ\SparkUserTeamEmail\SparkUserTeamEmailServiceProvider::class,
+    ```
+
 1. Publish the configuration, models, and migrations into your project.
 
     ```bash

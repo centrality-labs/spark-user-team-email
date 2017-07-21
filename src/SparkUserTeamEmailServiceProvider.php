@@ -3,7 +3,6 @@ namespace ZiNETHQ\SparkUserTeamEmail;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use ZiNETHQ\SparkUserTeamEmail\Console\Commands\ValidateInvitationsCommand;
 
 use Carbon\Carbon;
 
@@ -17,6 +16,8 @@ class SparkUserTeamEmailServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = false;
+
+    protected $commands = [];
 
     /**
      * Boot the service provider
@@ -43,6 +44,8 @@ class SparkUserTeamEmailServiceProvider extends ServiceProvider
         $this->app->singleton(SparkUserTeamEmail::class, function ($app) {
             return new SparkUserTeamEmail();
         });
+
+        $this->commands($this->commands);
     }
 
     /**
@@ -62,7 +65,7 @@ class SparkUserTeamEmailServiceProvider extends ServiceProvider
             $filename = ($exists && count($exists) === 1) ? $exists[0] : database_path("migrations/{$timestamp}_{$migration}.php");
             $publishes["{$stubs}/database/migrations/{$migration}.php"] = $filename;
         }
-        $publishes[realpath("{$stubs}/config")] = config_path();
+        $publishes["{$stubs}/config"] = config_path();
 
         $this->publishes($publishes);
     }
