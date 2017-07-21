@@ -1,5 +1,5 @@
 {
-    "name": "zinethq/spark-team-emails",
+    "name": "zinethq/spark-user-team-email",
     "description": "Add different email for a user on a team for Laravel Spark",
     "keywords": ["team", "user", "laravel", "spark", "email", "zinethq"],
     "license": "MIT",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ZiNETHQ\\SparkTeamEmail\\": "src/"
+            "ZiNETHQ\\SparkUserTeamEmail\\": "src/"
         }
     },
     "extra": {

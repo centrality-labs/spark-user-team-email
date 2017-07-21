@@ -1,15 +1,15 @@
 <?php
-namespace ZiNETHQ\SparkTeamEmail;
+namespace ZiNETHQ\SparkUserTeamEmail;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use ZiNETHQ\SparkTeamEmail\Console\Commands\ValidateInvitationsCommand;
+use ZiNETHQ\SparkUserTeamEmail\Console\Commands\ValidateInvitationsCommand;
 
 use Carbon\Carbon;
 
-use ZiNETHQ\SparkTeamEmail\SparkTeamEmail;
+use ZiNETHQ\SparkUserTeamEmail\SparkUserTeamEmail;
 
-class SparkTeamEmailServiceProvider extends ServiceProvider
+class SparkUserTeamEmailServiceProvider extends ServiceProvider
 {
     /**
      * Indicates of loading of the provider is deferred.
@@ -36,12 +36,12 @@ class SparkTeamEmailServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../install-stubs/config/sparkteamemail.php',
-            'sparkteamemail'
+            __DIR__.'/../install-stubs/config/sparkuserteamemail.php',
+            'sparkuserteamemail'
         );
 
-        $this->app->singleton(SparkTeamEmail::class, function ($app) {
-            return new SparkTeamEmail();
+        $this->app->singleton(SparkUserTeamEmail::class, function ($app) {
+            return new SparkUserTeamEmail();
         });
     }
 
@@ -86,6 +86,6 @@ class SparkTeamEmailServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [SparkTeamEmail::class];
+        return [SparkUserTeamEmail::class];
     }
 }

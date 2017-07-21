@@ -1,8 +1,8 @@
 <?php
 
-namespace ZiNETHQ\SparkTeamEmail;
+namespace ZiNETHQ\SparkUserTeamEmail;
 
-class SparkTeamEmail
+class SparkUserTeamEmail
 {
-
+    // I do nothing yet...
 }

@@ -1,10 +1,10 @@
 <?php
-namespace ZiNETHQ\SparkTeamEmail\Facades;
+namespace ZiNETHQ\SparkUserTeamEmail\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use ZiNETHQ\SparkTeamEmail\SparkTeamEmail as TeamEmail;
+use ZiNETHQ\SparkUserTeamEmail\SparkUserTeamEmail as UserTeamEmail;
 
-class SparkTeamEmail extends Facade
+class SparkUserTeamEmail extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class SparkTeamEmail extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return TeamEmail::class;
+        return UserTeamEmail::class;
     }
 }

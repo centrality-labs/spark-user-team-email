@@ -2,7 +2,7 @@
 return [
     /*
     |--------------------------------------------------------------------------
-    | Spark Team Email by Default
+    | Spark User Team Email -  Which email should be used by default
     |--------------------------------------------------------------------------
     |
     | Which email address should be displayed by default for a user?

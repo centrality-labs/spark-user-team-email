@@ -1,10 +1,10 @@
 <?php
 
-namespace ZiNETHQ\SparkTeamEmail\Traits;
+namespace ZiNETHQ\SparkUserTeamEmail\Traits;
 
 use Auth;
 
-trait HasTeamEmail
+trait HasUserTeamEmail
 {
     /**
      * Returns the email of this user on the given team, or null if not specified
@@ -45,7 +45,7 @@ trait HasTeamEmail
 
     public function getEmailAttribute($value)
     {
-        $default = config('sparkteamemail.default');
+        $default = config('sparkuserteamemail.default');
         switch ($default) {
             case 'user':
                 // Do nothing to the user's email
