@@ -14,3 +14,46 @@ Bob Bobbinson is a user of `spark-developer.com`. Bob uses `bob@bob.com` to log 
 Bob is a member of two teams on `spark-developer.com`, a team for his personal work (`DevBob`) and one for the company he works for (`BigDevelopsLtd`). Bob has been given a work email to use for all things `BigDevelopsLtd` related. However, out of the box Bob can only have one email - the one used to sign into the site.
 
 Spark Team Email allows adding secondary email addresses for a user in the context of a team. In this case Bob can add `bob@BigDevelopsLtd.com` as his email for the team `BigDevelopsLtd`.
+
+## Quick Installation
+
+1. Install the package through Composer.
+
+    ```bash
+    composer require zinethq/spark-team-email:dev-master
+    ```
+
+1. Publish the configuration, models, and migrations into your project.
+
+    ```bash
+    php artisan vendor:publish --provider="ZiNETHQ\SparkTeamEmail\SparkTeamEmailServiceProvider"
+    ```
+
+1. Migrate your database.
+
+    ```bash
+    php artisan migrate
+    ```
+
+1. Add the `HasTeamEmail` trait to your user model.
+
+    ```PHP
+    ...
+    use ZiNETHQ\SparkTeamEmail\Traits\HasTeamEmail;
+    ...
+
+    class User ... {
+        ...
+        use HasTeamEmail;
+        ...
+    }
+    ```
+
+1. You may wish to add the email to the pivot information of the `teams()` relationship:
+
+    ```PHP
+        public function teams()
+        {
+            return $this->sparkTeams()->withPivot(['email', 'role']);
+        }
+    ```
