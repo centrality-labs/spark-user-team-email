@@ -1,0 +1,37 @@
+{
+    "name": "zinethq/spark-team-emails",
+    "description": "Add different email for a user on a team for Laravel Spark",
+    "keywords": ["team", "user", "laravel", "spark", "email", "zinethq"],
+    "license": "MIT",
+    "authors": [{
+            "name": "Jon Nicholson",
+            "email": "jon.nicholson@zinethq.com",
+            "homepage": "http://www.drjonnicholson.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Ian Tasker",
+            "email": "ian.tasker@zinethq.com",
+            "homepage": "http://www.zinethq.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "laravel/framework": "5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZiNETHQ\\SparkTeamEmail\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}
