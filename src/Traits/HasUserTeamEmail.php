@@ -60,6 +60,7 @@ trait HasUserTeamEmail
 
     public function getTeamEmailsAttribute()
     {
-        return $this->teams()->withPivot(['email'])->select(['team_users.email', 'team_users.team_id'])->pluck('team_users.email', 'team_users.team_id');
+        return $this->teams()->withPivot(['email'])->select(['id', 'email'])->pluck('pivot.email', 'id');
+        // return $this->teams()->withPivot(['email'])->select(['team_users.email', 'team_users.team_id'])->pluck('team_users.email', 'team_users.team_id');
     }
 }
