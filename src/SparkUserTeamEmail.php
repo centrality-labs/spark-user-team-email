@@ -1,6 +1,6 @@
 <?php
 
-namespace ZiNETHQ\SparkUserTeamEmail;
+namespace CentralityLabs\SparkUserTeamEmail;
 
 class SparkUserTeamEmail
 {

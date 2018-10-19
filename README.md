@@ -1,9 +1,9 @@
-# ZiNETHQ Spark User Team Email
+# CentralityLabs Spark User Team Email
 
 [![Laravel 5.3](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
 [![Spark 2.0](https://img.shields.io/badge/Spark-2.0-orange.svg?style=flat-square)](https://spark.laravel.com)
-[![Source](http://img.shields.io/badge/source-zinethq/spark--team--email-blue.svg?style=flat-square)](https://github.com/zinethq/spark-team-email)
-[![Build Status](https://travis-ci.org/ZiNETHQ/spark-team-email.svg?branch=master)](https://travis-ci.org/ZiNETHQ/spark-team-email)
+[![Source](http://img.shields.io/badge/source-centrality-labs/spark--team--email-blue.svg?style=flat-square)](https://github.com/centrality-labs/spark-team-email)
+[![Build Status](https://travis-ci.org/CentralityLabs/spark-team-email.svg?branch=master)](https://travis-ci.org/CentralityLabs/spark-team-email)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://tldrlegal.com/license/mit-license)
 
 SparkUserTeamEmail provides a simple way for Laravel Spark to allow users to have a different email address on a team, without changing their user email address.
@@ -20,19 +20,19 @@ Spark User Team Email allows adding secondary email addresses for a user in the 
 1. Install the package through Composer.
 
     ```bash
-    composer require zinethq/spark-user-team-email:dev-master
+    composer require centrality-labs/spark-user-team-email:dev-master
     ```
 
 1. Add the service provider to your project's `config/app.php` file.
 
     ```php
-    ZiNETHQ\SparkUserTeamEmail\SparkUserTeamEmailServiceProvider::class,
+    CentralityLabs\SparkUserTeamEmail\SparkUserTeamEmailServiceProvider::class,
     ```
 
 1. Publish the configuration, models, and migrations into your project.
 
     ```bash
-    php artisan vendor:publish --provider="ZiNETHQ\SparkUserTeamEmail\SparkUserTeamEmailServiceProvider"
+    php artisan vendor:publish --provider="CentralityLabs\SparkUserTeamEmail\SparkUserTeamEmailServiceProvider"
     ```
 
 1. Migrate your database.
@@ -45,7 +45,7 @@ Spark User Team Email allows adding secondary email addresses for a user in the 
 
     ```PHP
     ...
-    use ZiNETHQ\SparkUserTeamEmail\Traits\HasUserTeamEmail;
+    use CentralityLabs\SparkUserTeamEmail\Traits\HasUserTeamEmail;
     ...
 
     class User ... {

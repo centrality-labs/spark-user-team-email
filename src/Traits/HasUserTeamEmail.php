@@ -1,6 +1,6 @@
 <?php
 
-namespace ZiNETHQ\SparkUserTeamEmail\Traits;
+namespace CentralityLabs\SparkUserTeamEmail\Traits;
 
 use Auth;
 

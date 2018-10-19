@@ -1,12 +1,12 @@
 <?php
-namespace ZiNETHQ\SparkUserTeamEmail;
+namespace CentralityLabs\SparkUserTeamEmail;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 use Carbon\Carbon;
 
-use ZiNETHQ\SparkUserTeamEmail\SparkUserTeamEmail;
+use CentralityLabs\SparkUserTeamEmail\SparkUserTeamEmail;
 
 class SparkUserTeamEmailServiceProvider extends ServiceProvider
 {

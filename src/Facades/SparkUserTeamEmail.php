@@ -1,8 +1,8 @@
 <?php
-namespace ZiNETHQ\SparkUserTeamEmail\Facades;
+namespace CentralityLabs\SparkUserTeamEmail\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use ZiNETHQ\SparkUserTeamEmail\SparkUserTeamEmail as UserTeamEmail;
+use CentralityLabs\SparkUserTeamEmail\SparkUserTeamEmail as UserTeamEmail;
 
 class SparkUserTeamEmail extends Facade
 {
